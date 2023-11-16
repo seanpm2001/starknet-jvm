@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>GatewayProvider</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>starknet-jvm</span>
+            </a>
+    </div>
+    <div>
+0.8.0    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":lib:dokkaHtml/main">jvm</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="starknet-jvm::com.swmansion.starknet.provider.gateway/GatewayProvider///PointingToDeclaration//1440829338">
+  <div class="breadcrumbs"><a href="../../../index.html">starknet-jvm</a><span class="delimiter">/</span><a href="../index.html">com.swmansion.starknet.provider.gateway</a><span class="delimiter">/</span><span class="current">GatewayProvider</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Gateway</span><wbr></wbr><span><span>Provider</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html"><strike>GatewayProvider</strike></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>feederGatewayUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gatewayUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>chainId<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-starknet-chain-id/index.html">StarknetChainId</a><span class="token punctuation">, </span></span><span class="parameter ">httpService<span class="token operator">: </span><a href="../../com.swmansion.starknet.service.http/-http-service/index.html">HttpService</a></span></span><span class="token punctuation">)</span> : <a href="../../com.swmansion.starknet.provider/-provider/index.html">Provider</a></div><div class="deprecation-content"><h3 class="">Deprecated</h3><p class="paragraph">Consider using JsonRpcProvider instead.</p></div><p class="paragraph">A provider for interacting with Starknet gateway. You should reuse it in your application to share the httpService or provide it with your own httpService.</p><h4 class="">Parameters</h4><div class="table"><div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>feeder</span><wbr></wbr><span>Gateway</span><wbr></wbr><span><span>Url</span></span></u></div></span></div><div><div class="title"><p class="paragraph">url of the feeder gateway</p></div></div></div></div><div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>gateway</span><wbr></wbr><span><span>Url</span></span></u></div></span></div><div><div class="title"><p class="paragraph">url of the gateway</p></div></div></div></div><div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>chain</span><wbr></wbr><span><span>Id</span></span></u></div></span></div><div><div class="title"><p class="paragraph">an id of the network</p></div></div></div></div><div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>http</span><wbr></wbr><span><span>Service</span></span></u></div></span></div><div><div class="title"><p class="paragraph">service used for making http requests</p></div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-111237725%2FConstructors%2F1440829338" anchor-label="GatewayProvider" id="-111237725%2FConstructors%2F1440829338" data-filterable-set=":lib:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gateway-provider.html"><span>Gateway</span><wbr></wbr><span><span>Provider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-111237725%2FConstructors%2F1440829338"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">feederGatewayUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">gatewayUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">chainId<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-starknet-chain-id/index.html">StarknetChainId</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">feederGatewayUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">gatewayUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">chainId<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-starknet-chain-id/index.html">StarknetChainId</a><span class="token punctuation">, </span></span><span class="parameter ">httpService<span class="token operator">: </span><a href="../../com.swmansion.starknet.service.http/-http-service/index.html">HttpService</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="1466771470%2FClasslikes%2F1440829338" anchor-label="Factory" id="1466771470%2FClasslikes%2F1440829338" data-filterable-set=":lib:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-factory/index.html"><span><span>Factory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1466771470%2FClasslikes%2F1440829338"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-factory/index.html">Factory</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-140626167%2FProperties%2F1440829338" anchor-label="chainId" id="-140626167%2FProperties%2F1440829338" data-filterable-set=":lib:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="chain-id.html"><span>chain</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-140626167%2FProperties%2F1440829338"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="chain-id.html">chainId</a><span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-starknet-chain-id/index.html">StarknetChainId</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1855335487%2FProperties%2F1440829338" anchor-label="feederGatewayUrl" id="1855335487%2FProperties%2F1440829338" data-filterable-set=":lib:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="feeder-gateway-url.html"><span>feeder</span><wbr></wbr><span>Gateway</span><wbr></wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1855335487%2FProperties%2F1440829338"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="feeder-gateway-url.html">feederGatewayUrl</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1976947446%2FProperties%2F1440829338" anchor-label="gatewayUrl" id="-1976947446%2FProperties%2F1440829338" data-filterable-set=":lib:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="gateway-url.html"><span>gateway</span><wbr></wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1976947446%2FProperties%2F1440829338"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gateway-url.html">gatewayUrl</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-405471453%2FFunctions%2F1440829338" anchor-label="callContract" id="-405471453%2FFunctions%2F1440829338" data-filterable-set=":lib:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.swmansion.starknet.provider/-provider/call-contract.html"><span>call</span><wbr></wbr><span><span>Contract</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-405471453%2FFunctions%2F1440829338"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../com.swmansion.starknet.provider/-provider/call-contract.html"><span class="token function">callContract</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">call<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-call/index.html">Call</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="call-contract.html"><span class="token function">callContract</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">call<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-call/index.html">Call</a><span class="token punctuation">, </span></span><span class="parameter ">blockTag<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-block-tag/index.html">BlockTag</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="call-contract.html"><span class="token function">callContract</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">call<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-call/index.html">Call</a><span class="token punctuation">, </span></span><span class="parameter ">blockHash<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="call-contract.html"><span class="token function">callContract</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">call<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-call/index.html">Call</a><span class="token punctuation">, </span></span><span class="parameter ">blockNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Calls a contract deployed on Starknet.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="653768189%2FFunctions%2F1440829338" anchor-label="declareContract" id="653768189%2FFunctions%2F1440829338" data-filterable-set=":lib:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="declare-contract.html"><span>declare</span><wbr></wbr><span><span>Contract</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="653768189%2FFunctions%2F1440829338"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="declare-contract.html"><span class="token function">declareContract</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">payload<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types.transactions/-declare-transaction-v1-payload/index.html">DeclareTransactionV1Payload</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-declare-response/index.html">DeclareResponse</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Declare version 1 contract</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="declare-contract.html"><span class="token function">declareContract</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">payload<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types.transactions/-declare-transaction-v2-payload/index.html">DeclareTransactionV2Payload</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-declare-response/index.html">DeclareResponse</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Declare version 2 contract</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1081325565%2FFunctions%2F1440829338" anchor-label="deployAccount" id="-1081325565%2FFunctions%2F1440829338" data-filterable-set=":lib:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="deploy-account.html"><span>deploy</span><wbr></wbr><span><span>Account</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1081325565%2FFunctions%2F1440829338"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="deploy-account.html"><span class="token function">deployAccount</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">payload<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types.transactions/-deploy-account-transaction-payload/index.html">DeployAccountTransactionPayload</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-deploy-account-response/index.html">DeployAccountResponse</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Deploy an account contract.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1348410198%2FFunctions%2F1440829338" anchor-label="getBlockHashAndNumber" id="-1348410198%2FFunctions%2F1440829338" data-filterable-set=":lib:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-block-hash-and-number.html"><span>get</span><wbr></wbr><span>Block</span><wbr></wbr><span>Hash</span><wbr></wbr><span>And</span><wbr></wbr><span><span>Number</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1348410198%2FFunctions%2F1440829338"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-block-hash-and-number.html"><span class="token function">getBlockHashAndNumber</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-get-block-hash-and-number-response/index.html">GetBlockHashAndNumberResponse</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Get the hash and number of the block.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1556736565%2FFunctions%2F1440829338" anchor-label="getBlockNumber" id="1556736565%2FFunctions%2F1440829338" data-filterable-set=":lib:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-block-number.html"><span>get</span><wbr></wbr><span>Block</span><wbr></wbr><span><span>Number</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1556736565%2FFunctions%2F1440829338"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-block-number.html"><span class="token function">getBlockNumber</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Get the block number.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1725138533%2FFunctions%2F1440829338" anchor-label="getBlockTransactionCount" id="1725138533%2FFunctions%2F1440829338" data-filterable-set=":lib:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-block-transaction-count.html"><span>get</span><wbr></wbr><span>Block</span><wbr></wbr><span>Transaction</span><wbr></wbr><span><span>Count</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1725138533%2FFunctions%2F1440829338"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-block-transaction-count.html"><span class="token function">getBlockTransactionCount</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">blockTag<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-block-tag/index.html">BlockTag</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-block-transaction-count.html"><span class="token function">getBlockTransactionCount</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">blockHash<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-block-transaction-count.html"><span class="token function">getBlockTransactionCount</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">blockNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Get the block transaction count.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1427026701%2FFunctions%2F1440829338" anchor-label="getClass" id="1427026701%2FFunctions%2F1440829338" data-filterable-set=":lib:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-class.html"><span>get</span><wbr></wbr><span><span>Class</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1427026701%2FFunctions%2F1440829338"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-class.html"><span class="token function">getClass</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">classHash<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-contract-class-base/index.html">ContractClassBase</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Get the contract class definition.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="313289179%2FFunctions%2F1440829338" anchor-label="getClassHashAt" id="313289179%2FFunctions%2F1440829338" data-filterable-set=":lib:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.swmansion.starknet.provider/-provider/get-class-hash-at.html"><span>get</span><wbr></wbr><span>Class</span><wbr></wbr><span>Hash</span><wbr></wbr><span><span>At</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="313289179%2FFunctions%2F1440829338"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../com.swmansion.starknet.provider/-provider/get-class-hash-at.html"><span class="token function">getClassHashAt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">contractAddress<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-class-hash-at.html"><span class="token function">getClassHashAt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">contractAddress<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token punctuation">, </span></span><span class="parameter ">blockTag<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-block-tag/index.html">BlockTag</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-class-hash-at.html"><span class="token function">getClassHashAt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">contractAddress<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token punctuation">, </span></span><span class="parameter ">blockHash<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-class-hash-at.html"><span class="token function">getClassHashAt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">contractAddress<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token punctuation">, </span></span><span class="parameter ">blockNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Get the contract class hash.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1466320077%2FFunctions%2F1440829338" anchor-label="getEstimateFee" id="1466320077%2FFunctions%2F1440829338" data-filterable-set=":lib:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.swmansion.starknet.provider/-provider/get-estimate-fee.html"><span>get</span><wbr></wbr><span>Estimate</span><wbr></wbr><span><span>Fee</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1466320077%2FFunctions%2F1440829338"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../com.swmansion.starknet.provider/-provider/get-estimate-fee.html"><span class="token function">getEstimateFee</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">payload<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types.transactions/-transaction-payload/index.html">TransactionPayload</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-estimate-fee-response/index.html">EstimateFeeResponse</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><br><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-estimate-fee.html"><span class="token function">getEstimateFee</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">payload<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types.transactions/-transaction-payload/index.html">TransactionPayload</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">blockTag<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-block-tag/index.html">BlockTag</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-estimate-fee-response/index.html">EstimateFeeResponse</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-estimate-fee.html"><span class="token function">getEstimateFee</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">payload<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types.transactions/-transaction-payload/index.html">TransactionPayload</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">blockHash<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-estimate-fee-response/index.html">EstimateFeeResponse</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-estimate-fee.html"><span class="token function">getEstimateFee</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">payload<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types.transactions/-transaction-payload/index.html">TransactionPayload</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">blockNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-estimate-fee-response/index.html">EstimateFeeResponse</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Estimate a fee.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1549659013%2FFunctions%2F1440829338" anchor-label="getNonce" id="1549659013%2FFunctions%2F1440829338" data-filterable-set=":lib:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-nonce.html"><span>get</span><wbr></wbr><span><span>Nonce</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1549659013%2FFunctions%2F1440829338"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-nonce.html"><span class="token function">getNonce</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">contractAddress<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-nonce.html"><span class="token function">getNonce</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">contractAddress<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token punctuation">, </span></span><span class="parameter ">blockTag<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-block-tag/index.html">BlockTag</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Get a nonce.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1457123605%2FFunctions%2F1440829338" anchor-label="getStorageAt" id="-1457123605%2FFunctions%2F1440829338" data-filterable-set=":lib:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.swmansion.starknet.provider/-provider/get-storage-at.html"><span>get</span><wbr></wbr><span>Storage</span><wbr></wbr><span><span>At</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1457123605%2FFunctions%2F1440829338"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../com.swmansion.starknet.provider/-provider/get-storage-at.html"><span class="token function">getStorageAt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">contractAddress<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token punctuation">, </span></span><span class="parameter ">key<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-storage-at.html"><span class="token function">getStorageAt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">contractAddress<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token punctuation">, </span></span><span class="parameter ">key<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token punctuation">, </span></span><span class="parameter ">blockTag<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-block-tag/index.html">BlockTag</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-storage-at.html"><span class="token function">getStorageAt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">contractAddress<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token punctuation">, </span></span><span class="parameter ">key<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token punctuation">, </span></span><span class="parameter ">blockHash<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-storage-at.html"><span class="token function">getStorageAt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">contractAddress<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token punctuation">, </span></span><span class="parameter ">key<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token punctuation">, </span></span><span class="parameter ">blockNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Get a value of storage var.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1874671001%2FFunctions%2F1440829338" anchor-label="getTransaction" id="-1874671001%2FFunctions%2F1440829338" data-filterable-set=":lib:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-transaction.html"><span>get</span><wbr></wbr><span><span>Transaction</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1874671001%2FFunctions%2F1440829338"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-transaction.html"><span class="token function">getTransaction</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">transactionHash<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types.transactions/-transaction/index.html">Transaction</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Get a transaction.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-223154769%2FFunctions%2F1440829338" anchor-label="getTransactionReceipt" id="-223154769%2FFunctions%2F1440829338" data-filterable-set=":lib:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-transaction-receipt.html"><span>get</span><wbr></wbr><span>Transaction</span><wbr></wbr><span><span>Receipt</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-223154769%2FFunctions%2F1440829338"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-transaction-receipt.html"><span class="token function">getTransactionReceipt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">transactionHash<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types/-felt/index.html">Felt</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="../../com.swmansion.starknet.data.types.transactions/-transaction-receipt/index.html">TransactionReceipt</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Get transaction receipt</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1008649605%2FFunctions%2F1440829338" anchor-label="invokeFunction" id="-1008649605%2FFunctions%2F1440829338" data-filterable-set=":lib:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":lib:dokkaHtml/main" data-filterable-set=":lib:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="invoke-function.html"><span>invoke</span><wbr></wbr><span><span>Function</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1008649605%2FFunctions%2F1440829338"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":lib:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="invoke-function.html"><span class="token function">invokeFunction</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">payload<span class="token operator">: </span><a href="../../com.swmansion.starknet.data.types.transactions/-invoke-transaction-payload/index.html">InvokeTransactionPayload</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.swmansion.starknet.provider/-request/index.html">Request</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.swmansion.starknet.data.types/-invoke-function-response/index.html">InvokeFunctionResponse</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Invoke a function.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
